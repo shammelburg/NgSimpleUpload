@@ -43,8 +43,6 @@ angular.module('app').directive('ngSimpleUpload', [function () {
 // The controller callback function
 $scope.myCallback = function (valueFromDirective) {
     console.log(valueFromDirective);
-    $scope.message = valueFromDirective;
-    Data();
 };
 ```
 
