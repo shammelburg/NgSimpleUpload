@@ -67,6 +67,6 @@ public IHttpActionResult Post()
        // Your logic here
    }
 
-    return Ok(String.Format("Successfully uploaded {0} files.", files.Count);
+    return Ok(String.Format("Successfully uploaded {0} files.", files.Count));
 }
 ```
