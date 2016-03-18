@@ -14,7 +14,7 @@ angular.module('app', ['ngSimpleUpload']);
 
 
 
-The add the input[type=file] into your html page.
+Then add the input[type=file] into your html page.
 This will trigger the file upload when you have selected your file(s).
 ```html 
 <input type="file" multiple ng-simple-upload web-api-url="/api/post" callback-fn="myCallback" />
@@ -31,7 +31,7 @@ Add ```button-id=""``` with the ID of the button.
 
 
 
-This callback function is the HTTP 200 returned from your Web API. Errors are logged in the console.
+The callback function is the HTTP 200 returned from your Web API. Errors are logged in the console.
 ```js 
 // The controller callback function
 $scope.myCallback = function (valueFromDirective) {
