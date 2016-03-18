@@ -5,6 +5,7 @@ First add the directive to your project.
 ```html
 <script src="ng-simple-upload.js"></script>
 ```
+
 Add the dependency to you angular module.
 ```js
 angular.module('app', ['ngSimpleUpload']);
@@ -12,16 +13,16 @@ angular.module('app', ['ngSimpleUpload']);
 
 
 
-The add the input[type=file] into your html page.
 
+The add the input[type=file] into your html page.
 This will trigger the file upload when you have selected your file(s).
 ```html 
 <input type="file" multiple ng-simple-upload web-api-url="/api/post" callback-fn="myCallback" />
 ```
 
 
-Alternatively, you can choose to upload manually by clicking a button.
 
+Alternatively, you can choose to upload manually by clicking a button.
 Add ```button-id=""``` with the ID of the button.
 ```html
 <input type="file" ng-simple-upload web-api-url="/api/post" callback-fn="myCallback" button-id="upload" />
@@ -29,13 +30,15 @@ Add ```button-id=""``` with the ID of the button.
 ```
 
 
-This callback function is the HTTP 200 returned from your Web API.
+
+This callback function is the HTTP 200 returned from your Web API. Errors are logged in the console.
 ```js 
 // The controller callback function
 $scope.myCallback = function (valueFromDirective) {
     console.log(valueFromDirective);
 };
 ```
+
 
 
 
