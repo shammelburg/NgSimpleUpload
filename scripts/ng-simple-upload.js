@@ -19,6 +19,9 @@ angular.module('ngSimpleUpload', [])
                         }
 
                         Upload(files);
+                        
+                        // removes file(s) from input
+                        $(this).val('');
                     });
                 }
                 else {
