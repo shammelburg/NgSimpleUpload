@@ -19,9 +19,6 @@ angular.module('ngSimpleUpload', [])
                         }
 
                         Upload(files);
-                        
-                        // removes file(s) from input
-                        $(this).val('');
                     });
                 }
                 else {
@@ -30,6 +27,9 @@ angular.module('ngSimpleUpload', [])
                         var files = evt.__files_ || (evt.target && evt.target.files);
 
                         Upload(files);
+                        
+                        // removes file(s) from input
+                        $(this).val('');
                     });
                 }
 
