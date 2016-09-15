@@ -3,6 +3,9 @@ A tiny, simple directive to for uploading files.
 
 First add the directive to your project.
 ```html
+<!-- required scripts -->
+<script src="jquery.js"></script>
+<script src="angular.js"></script>
 <script src="ng-simple-upload.js"></script>
 ```
 
