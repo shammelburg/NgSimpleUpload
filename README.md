@@ -28,7 +28,7 @@ This will trigger the file upload when you have selected your file(s).
 Alternatively, you can choose to upload manually by clicking a button.
 Add ```button-id=""``` with the ID of the button.
 ```html
-<input type="file" ng-simple-upload web-api-url="/api/Upload" callback-fn="myCallback" button-id="upload" />
+<input type="file" ng-simple-upload web-api-url="/api/Upload" callback-fn="myCallback" form-data-fn="setAdditionalFormData" button-id="upload" />
 <button id="upload">Upload</button>
 ```
 
@@ -43,6 +43,15 @@ $scope.myCallback = function (valueFromDirective) {
 ```
 
 
+Function defined in ```form-data-fn``` optional attribute could be used to add additional field values. For example, add related entity id to attach file to:
+```js
+$scope.formDataCallback = function(formData) {
+    formData.append('id', $scope.model.id);
+}
+// Usage: 
+// <input type="file" ng-simple-upload  web-api-url="..." callback-fn="..." 
+//        form-data-fn="formDataCallback"/>
+```
 
 
 **Example Web API**
