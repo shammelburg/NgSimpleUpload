@@ -4,6 +4,7 @@ angular.module('ngSimpleUpload', [])
             scope: {
                 webApiUrl: '@',
                 callbackFn: '=',
+                formDataFn: '=',
                 buttonId: '@'
             },
             link: function (scope, element, attrs) {
@@ -35,6 +36,9 @@ angular.module('ngSimpleUpload', [])
 
                 function Upload(files) {
                     var fd = new FormData();
+                    if (scope.formDataFn) {
+                        scope.formDataFn(fd);
+                    }
                     angular.forEach(files, function (v, k) {
                         fd.append('file', files[k]);
                     });
